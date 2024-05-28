@@ -4,6 +4,6 @@
  * project  coding-assignment-12-cra
  */
 
-export type DefaultComponentProps = {
-  disabled?: boolean;
-};
+import Table from "./Table";
+
+export default Table;
