@@ -8,7 +8,7 @@ import styled from "styled-components";
 import type { ButtonProps, StyledButtonProps } from "./Button.types";
 
 const StyledButton = styled.button<StyledButtonProps>`
-  background-color: ${(props) => (props.disabled ? "#f5f5f5" : " #1ea7fd")};
+  background-color: ${(props) => (props.disabled ? "#f5f5f5" : "#1ea7fd")};
   border-radius: 5px;
   border-color: ${(props) => (props.disabled ? "#999" : "#1ea7fd")};
   color: ${(props) => (props.disabled ? "#999" : "#fff")};

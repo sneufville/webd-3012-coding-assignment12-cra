@@ -37,7 +37,7 @@ const Dropdown: React.FC<DropdownProps> = ({ disabled, options, onChange }) => {
           key={`${index}-${opt.value}`}
           value={opt.value}
         >
-          {opt.value}
+          {opt.label}
         </option>
       ))}
     </StyledDropdown>

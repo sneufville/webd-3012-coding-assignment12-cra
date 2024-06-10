@@ -4,18 +4,26 @@
  * project  coding-assignment-12-cra
  */
 
-import type {Meta, StoryObj} from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import Label from "./Label";
 
 const meta: Meta<typeof Label> = {
-  title: 'Components/Label',
-  component: Label
-}
+  title: "Components/Label",
+  component: Label,
+};
 export default meta;
 type Story = StoryObj<typeof Label>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    labelText: 'Default Label Text',
-  }
-}
+    labelText: "Default Label Text",
+    disabled: true,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    labelText: "Default Disabled Label",
+    disabled: true,
+  },
+};

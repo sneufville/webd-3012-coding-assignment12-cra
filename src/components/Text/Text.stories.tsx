@@ -1,31 +1,30 @@
 /**
  * @author  sai
- * created  2024-05-27
+ * created  2024-06-10
  * project  coding-assignment-12-cra
  */
-
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "./Button";
+import Text from "./Text";
 
-const meta: Meta<typeof Button> = {
-  title: "Components/Button",
-  component: Button,
+const meta: Meta<typeof Text> = {
+  component: Text,
+  title: "Components/Text",
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    titleText: "Default Button Text",
+    content: "Default Text",
     disabled: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    titleText: "Default Disabled Button",
+    content: "Default Disabled Text",
     disabled: true,
   },
 };

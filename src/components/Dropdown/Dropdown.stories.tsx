@@ -31,3 +31,19 @@ export const Default: Story = {
     ],
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    options: [
+      {
+        label: "Option One",
+        value: "opt-1",
+      },
+      {
+        label: "Option Two",
+        value: "opt-2",
+      },
+    ],
+  },
+};

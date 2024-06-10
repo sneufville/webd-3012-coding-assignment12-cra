@@ -9,6 +9,7 @@ import type { ReactNode } from "react";
 export type StyledLabelProps = DefaultComponentProps & {};
 
 export type LabelProps = Pick<DefaultComponentProps, "disabled"> & {
+  backgroundColor?: string;
   iconElement?: ReactNode;
   labelText: string;
 };

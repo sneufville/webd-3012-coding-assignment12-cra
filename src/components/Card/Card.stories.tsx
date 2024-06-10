@@ -23,3 +23,11 @@ export const Default: Story = {
     disabled: false,
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    cardTitle: "Default Disabled Card",
+    cardContent: "This is some card content for a card disabled by default",
+    disabled: true,
+  },
+};
