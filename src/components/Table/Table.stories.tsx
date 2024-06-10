@@ -9,6 +9,8 @@ import Table from "./Table";
 import TableCell from "./TableCell";
 import TableRow from "./TableRow";
 import TableHeader from "./TableHeader";
+import TableBody from "./TableBody";
+import TableFooter from "./TableFooter";
 
 const meta: Meta<typeof Table> = {
   title: "Components/Table",
@@ -36,6 +38,32 @@ export const Default: Story = {
           <TableCell disabled={args.disabled}>Column Heading 2</TableCell>
         </TableRow>
       </TableHeader>
+      <TableBody>
+        <TableRow disabled={args.disabled}>
+          <TableCell
+            key={"table-body-cell-1"}
+            disabled={args.disabled}
+          >
+            Column 1 Row 1
+          </TableCell>
+          <TableCell
+            key={"table-body-cell-2"}
+            disabled={args.disabled}
+          >
+            Column 2 Row 1
+          </TableCell>
+        </TableRow>
+      </TableBody>
+      <TableFooter disabled={args.disabled}>
+        <TableRow disabled={args.disabled}>
+          <TableCell
+            disabled={args.disabled}
+            colSpan={2}
+          >
+            Footer Content
+          </TableCell>
+        </TableRow>
+      </TableFooter>
     </Table>
   ),
 };

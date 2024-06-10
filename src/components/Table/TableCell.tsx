@@ -19,11 +19,19 @@ const StyledTableCell = styled.td<StyledTableCellProps>`
  * @function TableCell
  * @param children
  * @param disabled
+ * @param colSpan
  * @constructor
  * @description Renders a table cell (<td>) that should be used with a table
  */
-const TableCell: React.FC<TableCellProps> = ({ children, disabled }) => {
-  return <StyledTableCell disabled={disabled}>{children}</StyledTableCell>;
+const TableCell: React.FC<TableCellProps> = ({ children, disabled, colSpan }) => {
+  return (
+    <StyledTableCell
+      colSpan={colSpan}
+      disabled={disabled}
+    >
+      {children}
+    </StyledTableCell>
+  );
 };
 
 export default TableCell;
