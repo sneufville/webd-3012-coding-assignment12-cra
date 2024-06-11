@@ -6,8 +6,11 @@
 
 import type { DefaultComponentProps } from "../../@types/app";
 
-export type StyledTextProps = Pick<DefaultComponentProps, "disabled"> & {};
+export type StyledTextProps = Pick<DefaultComponentProps, "disabled"> & {
+  backgroundColor?: string;
+};
 
 export type TextProps = Pick<DefaultComponentProps, "disabled"> & {
+  backgroundColor?: string;
   content: string;
 };

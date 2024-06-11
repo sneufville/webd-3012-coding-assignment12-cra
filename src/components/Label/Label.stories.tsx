@@ -19,11 +19,21 @@ export const Default: Story = {
     labelText: "Default Label Text",
     disabled: true,
   },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export const Disabled: Story = {
   args: {
     labelText: "Default Disabled Label",
     disabled: true,
+  },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
   },
 };

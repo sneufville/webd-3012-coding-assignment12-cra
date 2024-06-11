@@ -22,6 +22,11 @@ export const Default: Story = {
     cardContent: "This is some card content",
     disabled: false,
   },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export const Disabled: Story = {
@@ -29,5 +34,10 @@ export const Disabled: Story = {
     cardTitle: "Default Disabled Card",
     cardContent: "This is some card content for a card disabled by default",
     disabled: true,
+  },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
   },
 };

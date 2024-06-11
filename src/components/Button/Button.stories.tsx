@@ -21,11 +21,21 @@ export const Default: Story = {
     titleText: "Default Button Text",
     disabled: false,
   },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export const Disabled: Story = {
   args: {
     titleText: "Default Disabled Button",
     disabled: true,
+  },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
   },
 };

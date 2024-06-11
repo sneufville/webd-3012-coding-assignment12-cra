@@ -30,6 +30,11 @@ export const Default: Story = {
       },
     ],
   },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export const Disabled: Story = {
@@ -45,5 +50,10 @@ export const Disabled: Story = {
         value: "opt-2",
       },
     ],
+  },
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
   },
 };

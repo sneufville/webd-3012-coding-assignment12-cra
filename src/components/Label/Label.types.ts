@@ -6,7 +6,9 @@
 import type { DefaultComponentProps } from "../../@types/app";
 import type { ReactNode } from "react";
 
-export type StyledLabelProps = DefaultComponentProps & {};
+export type StyledLabelProps = DefaultComponentProps & {
+  backgroundColor?: string;
+};
 
 export type LabelProps = Pick<DefaultComponentProps, "disabled"> & {
   backgroundColor?: string;

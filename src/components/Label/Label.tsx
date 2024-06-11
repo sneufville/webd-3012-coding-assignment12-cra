@@ -13,7 +13,7 @@ import type { LabelProps, StyledLabelProps } from "./Label.types";
  */
 const StyledLabel = styled.label<StyledLabelProps>`
   align-items: center;
-  background-color: ${(props) => (props.disabled ? "#f5f5f5" : "#1ea7fd")};
+  background-color: ${(props) => (props.disabled ? "#f5f5f5" : props.backgroundColor ?? "#1ea7fd")};
   border-color: #1ea7fd;
   border-radius: 5px;
   border-width: 1px;
@@ -28,14 +28,18 @@ const StyledLabel = styled.label<StyledLabelProps>`
 
 /**
  * @function Label
+ * @param backgroundColor
  * @param disabled indicates if the component should be rendered as disabled
  * @param iconElement an optional icon component to be shown with the label text
  * @param labelText the content that should be displayed
  * @constructor
  */
-const Label = ({ disabled, labelText, iconElement }: LabelProps) => {
+const Label = ({ backgroundColor, disabled, labelText, iconElement }: LabelProps) => {
   return (
-    <StyledLabel disabled={disabled}>
+    <StyledLabel
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+    >
       {iconElement}
       {labelText}
     </StyledLabel>

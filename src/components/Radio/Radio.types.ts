@@ -7,13 +7,12 @@
 import React from "react";
 import type { DefaultComponentProps } from "../../@types/app";
 
-export type StyledCardProps = Pick<DefaultComponentProps, "disabled"> & {
+export type StyledRadioProps = Pick<DefaultComponentProps, "disabled"> & {
   backgroundColor?: string;
 };
 
-export type CardProps = Pick<DefaultComponentProps, "disabled"> & {
+export type RadioProps = Pick<DefaultComponentProps, "disabled"> & {
   backgroundColor?: string;
-  cardTitle: string;
-  cardContent?: React.ReactNode;
-  cardActions?: React.ReactNode;
+  labelText: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };

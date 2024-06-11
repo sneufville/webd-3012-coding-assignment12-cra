@@ -6,7 +6,9 @@
 
 import type { DefaultComponentProps } from "../../@types/app";
 
-export type StyledButtonProps = DefaultComponentProps & {};
+export type StyledButtonProps = DefaultComponentProps & {
+  backgroundColor?: string;
+};
 
 export type ButtonProps = Pick<DefaultComponentProps, "disabled"> & {
   backgroundColor?: string;

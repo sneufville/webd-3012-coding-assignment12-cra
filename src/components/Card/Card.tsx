@@ -9,7 +9,7 @@ import styled from "styled-components";
 import type { CardProps, StyledCardProps } from "./Card.types";
 
 const StyledCard = styled.div<StyledCardProps>`
-  background-color: ${(props) => (props.disabled ? "#f4f4f4" : "#1ea7fd")};
+  background-color: ${(props) => (props.disabled ? "#f4f4f4" : props.backgroundColor ?? "#1ea7fd")};
   border-radius: 5px;
   color: ${(props) => (props.disabled ? "#c0c0c0" : "#fff")};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
@@ -23,9 +23,18 @@ const StyledCard = styled.div<StyledCardProps>`
   }
 `;
 
-const Card: React.FC<CardProps> = ({ cardTitle, cardActions, cardContent, disabled }) => {
+const Card: React.FC<CardProps> = ({
+  backgroundColor,
+  cardTitle,
+  cardActions,
+  cardContent,
+  disabled,
+}) => {
   return (
-    <StyledCard disabled={disabled}>
+    <StyledCard
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+    >
       <h2>{cardTitle}</h2>
       {cardContent}
       {cardActions}

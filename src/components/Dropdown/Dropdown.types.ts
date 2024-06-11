@@ -8,6 +8,7 @@ import React from "react";
 import type { DefaultComponentProps } from "../../@types/app";
 
 export type DropdownProps = Pick<DefaultComponentProps, "disabled"> & {
+  backgroundColor?: string;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: {
     label: string;
@@ -15,4 +16,6 @@ export type DropdownProps = Pick<DefaultComponentProps, "disabled"> & {
   }[];
 };
 
-export type StyledDropdownProps = Pick<DefaultComponentProps, "disabled"> & {};
+export type StyledDropdownProps = Pick<DefaultComponentProps, "disabled"> & {
+  backgroundColor?: string;
+};
