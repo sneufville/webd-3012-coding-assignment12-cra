@@ -10,3 +10,18 @@ export type DefaultComponentProps = {
    */
   disabled?: boolean;
 };
+
+export type DefaultImageComponentProps = DefaultComponentProps & {
+  /**
+   * What is shown when the image fails to load
+   */
+  altText: string;
+  /**
+   * Specifies what image should be loaded
+   */
+  src: string;
+  /**
+   * Optionally sets the test id for the component
+   */
+  testId?: string;
+};
