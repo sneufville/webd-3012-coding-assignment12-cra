@@ -3,9 +3,12 @@ __Assignment #__: Coding Assignment: 12
 
 __Prepared by__: Simon Neufville
 
+## GitHub Repository Link
+https://github.com/sneufville/webd-3012-coding-assignment12-cra
+
 ## Assignment specifics
 
-This project uses `create vite@latest` with the `React/TypeScript` template and `StorybookJS` which results in the creation of a React application (the expected output)
+This project uses `create-react-app` with the `TypeScript` template and `StorybookJS` to create a component library
 
 ## How to run
 
