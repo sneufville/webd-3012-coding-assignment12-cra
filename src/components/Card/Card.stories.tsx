@@ -10,6 +10,15 @@ import Card from "./Card";
 const meta: Meta<typeof Card> = {
   component: Card,
   title: "Components/Card",
+  tags: ["autodocs"],
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+    foregroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export default meta;
@@ -22,11 +31,6 @@ export const Default: Story = {
     cardContent: "This is some card content",
     disabled: false,
   },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
-  },
 };
 
 export const Disabled: Story = {
@@ -34,10 +38,5 @@ export const Disabled: Story = {
     cardTitle: "Default Disabled Card",
     cardContent: "This is some card content for a card disabled by default",
     disabled: true,
-  },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
   },
 };

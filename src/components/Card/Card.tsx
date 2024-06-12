@@ -11,7 +11,7 @@ import type { CardProps, StyledCardProps } from "./Card.types";
 const StyledCard = styled.div<StyledCardProps>`
   background-color: ${(props) => (props.disabled ? "#f4f4f4" : props.backgroundColor ?? "#1ea7fd")};
   border-radius: 5px;
-  color: ${(props) => (props.disabled ? "#c0c0c0" : "#fff")};
+  color: ${(props) => (props.disabled ? "#c0c0c0" : props.foregroundColor ?? "#fff")};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   display: flex;
   flex-direction: column;
@@ -29,11 +29,13 @@ const Card: React.FC<CardProps> = ({
   cardActions,
   cardContent,
   disabled,
+  foregroundColor,
 }) => {
   return (
     <StyledCard
       backgroundColor={backgroundColor}
       disabled={disabled}
+      foregroundColor={foregroundColor}
     >
       <h2>{cardTitle}</h2>
       {cardContent}

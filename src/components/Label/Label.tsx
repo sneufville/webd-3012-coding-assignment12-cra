@@ -26,14 +26,6 @@ const StyledLabel = styled.label<StyledLabelProps>`
   width: fit-content;
 `;
 
-/**
- * @function Label
- * @param backgroundColor
- * @param disabled indicates if the component should be rendered as disabled
- * @param iconElement an optional icon component to be shown with the label text
- * @param labelText the content that should be displayed
- * @constructor
- */
 const Label = ({ backgroundColor, disabled, labelText, iconElement }: LabelProps) => {
   return (
     <StyledLabel

@@ -11,6 +11,12 @@ export type StyledButtonProps = DefaultComponentProps & {
 };
 
 export type ButtonProps = Pick<DefaultComponentProps, "disabled"> & {
+  /**
+   * Optionally sets the background color for the button
+   */
   backgroundColor?: string;
+  /**
+   * What is shown on the button
+   */
   titleText: string;
 };

@@ -12,23 +12,24 @@ const StyledDropdown = styled.select<StyledDropdownProps>`
   border-radius: 5px;
   border-width: 1px;
   border-color: ${(props) => (props.disabled ? "#c0c0c0" : "#333")};
-  background-color: ${(props) => (props.disabled ? "#f4f4f4" : "transparent")};
-  color: ${(props) => (props.disabled ? "#c0c0c0" : "#333")};
+  background-color: ${(props) =>
+    props.disabled ? "#f4f4f4" : props.backgroundColor ?? "transparent"};
+  color: ${(props) => (props.disabled ? "#c0c0c0" : props.foregroundColor ?? "#333")};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   padding: 0.5rem;
 `;
 
-/**
- * @function Dropdown
- * @param disabled
- * @param options
- * @param onChange
- * @constructor
- * @description Renders a dropdown component
- */
-const Dropdown: React.FC<DropdownProps> = ({ disabled, options, onChange }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+  backgroundColor,
+  disabled,
+  foregroundColor,
+  options,
+  onChange,
+}) => {
   return (
     <StyledDropdown
+      backgroundColor={backgroundColor}
+      foregroundColor={foregroundColor}
       disabled={disabled}
       onChange={onChange}
     >

@@ -1,20 +1,18 @@
 /**
  * @author  sai
- * created  2024-06-10
+ * created  2024-06-12
  * project  coding-assignment-12-cra
  */
-import type { Meta, StoryObj } from "@storybook/react";
-import Text from "./Text";
 
-const meta: Meta<typeof Text> = {
-  component: Text,
-  title: "Components/Text",
+import type { Meta, StoryObj } from "@storybook/react";
+import Radio from "./Radio";
+
+const meta: Meta<typeof Radio> = {
+  component: Radio,
+  title: "Components/Radio",
   tags: ["autodocs"],
   argTypes: {
     backgroundColor: {
-      control: { type: "color" },
-    },
-    foregroundColor: {
       control: { type: "color" },
     },
   },
@@ -22,18 +20,19 @@ const meta: Meta<typeof Text> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Radio>;
 
 export const Default: Story = {
   args: {
-    content: "Default Text",
+    backgroundColor: "#aac1e4",
     disabled: false,
+    labelText: "Default Label",
   },
 };
 
 export const Disabled: Story = {
   args: {
-    content: "Default Disabled Text",
     disabled: true,
+    labelText: "Disabled Label",
   },
 };

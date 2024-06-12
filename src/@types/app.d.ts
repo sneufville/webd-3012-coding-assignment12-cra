@@ -5,5 +5,8 @@
  */
 
 export type DefaultComponentProps = {
+  /**
+   * Determines if the component can be interacted with
+   */
   disabled?: boolean;
 };

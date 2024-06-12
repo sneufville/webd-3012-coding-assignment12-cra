@@ -12,7 +12,21 @@ export type StyledRadioProps = Pick<DefaultComponentProps, "disabled"> & {
 };
 
 export type RadioProps = Pick<DefaultComponentProps, "disabled"> & {
+  /**
+   * The background color for the component
+   */
   backgroundColor?: string;
+  /**
+   * Optionally sets the foreground color the radio button's label
+   */
+  foregroundColor?: string;
+  /**
+   * Optional label text to go with the radio button's label
+   */
   labelText: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * Optional event handler for the radio button
+   * @param event
+   */
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };

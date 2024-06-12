@@ -10,6 +10,15 @@ import Dropdown from "./Dropdown";
 const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
   title: "Components/Dropdown",
+  tags: ["autodocs"],
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+    foregroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 
 export default meta;
@@ -30,11 +39,6 @@ export const Default: Story = {
       },
     ],
   },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
-  },
 };
 
 export const Disabled: Story = {
@@ -50,10 +54,5 @@ export const Disabled: Story = {
         value: "opt-2",
       },
     ],
-  },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
   },
 };
