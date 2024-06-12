@@ -8,9 +8,17 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Label from "./Label";
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: "UIGarden/Label",
   component: Label,
   tags: ["autodocs"],
+  argTypes: {
+    backgroundColor: {
+      control: { type: "color" },
+    },
+    foregroundColor: {
+      control: { type: "color" },
+    },
+  },
 };
 export default meta;
 type Story = StoryObj<typeof Label>;
@@ -18,12 +26,7 @@ type Story = StoryObj<typeof Label>;
 export const Default: Story = {
   args: {
     labelText: "Default Label Text",
-    disabled: true,
-  },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
+    disabled: false,
   },
 };
 
@@ -31,10 +34,5 @@ export const Disabled: Story = {
   args: {
     labelText: "Default Disabled Label",
     disabled: true,
-  },
-  argTypes: {
-    backgroundColor: {
-      control: { type: "color" },
-    },
   },
 };

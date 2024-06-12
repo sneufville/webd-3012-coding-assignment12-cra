@@ -3,6 +3,7 @@
  * created  2024-05-27
  * project  coding-assignment-12-cra
  */
+import React from "react";
 import styled from "styled-components";
 import type { LabelProps, StyledLabelProps } from "./Label.types";
 
@@ -17,7 +18,7 @@ const StyledLabel = styled.label<StyledLabelProps>`
   border-color: #1ea7fd;
   border-radius: 5px;
   border-width: 1px;
-  color: ${(props) => (props.disabled ? "#999" : "#fff")};
+  color: ${(props) => (props.disabled ? "#999" : props.foregroundColor ?? "#fff")};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   display: flex;
   gap: 0.25rem;
@@ -26,11 +27,18 @@ const StyledLabel = styled.label<StyledLabelProps>`
   width: fit-content;
 `;
 
-const Label = ({ backgroundColor, disabled, labelText, iconElement }: LabelProps) => {
+const Label: React.FC<LabelProps> = ({
+  backgroundColor,
+  disabled,
+  foregroundColor,
+  labelText,
+  iconElement,
+}) => {
   return (
     <StyledLabel
       backgroundColor={backgroundColor}
       disabled={disabled}
+      foregroundColor={foregroundColor}
     >
       {iconElement}
       {labelText}

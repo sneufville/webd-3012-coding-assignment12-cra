@@ -8,6 +8,7 @@ import type { DefaultComponentProps } from "../../@types/app";
 
 export type StyledLabelProps = DefaultComponentProps & {
   backgroundColor?: string;
+  foregroundColor?: string;
 };
 
 export type LabelProps = Pick<DefaultComponentProps, "disabled"> & {
@@ -15,6 +16,10 @@ export type LabelProps = Pick<DefaultComponentProps, "disabled"> & {
    * Optionally sets the background color for the label
    */
   backgroundColor?: string;
+  /**
+   * Optionally sets the foreground color the label
+   */
+  foregroundColor?: string;
   /**
    * Optionally sets the icon for the label
    * @type ReactNode

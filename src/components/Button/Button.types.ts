@@ -8,6 +8,7 @@ import type { DefaultComponentProps } from "../../@types/app";
 
 export type StyledButtonProps = DefaultComponentProps & {
   backgroundColor?: string;
+  foregroundColor?: string;
 };
 
 export type ButtonProps = Pick<DefaultComponentProps, "disabled"> & {
@@ -15,6 +16,10 @@ export type ButtonProps = Pick<DefaultComponentProps, "disabled"> & {
    * Optionally sets the background color for the button
    */
   backgroundColor?: string;
+  /**
+   * Optionally sets the foreground color for the button
+   */
+  foregroundColor?: string;
   /**
    * What is shown on the button
    */

@@ -29,6 +29,7 @@ const RadioContainer = styled.div<{
 const StyledRadio = styled.input.attrs<StyledRadioProps>((props) => ({
   backgroundColor: props.disabled ? "#f5f5f5" : props.backgroundColor ?? "#fff",
   disabled: props.disabled,
+  role: "radio",
   type: "radio",
 }))`
   background-color: ${(props) => props.backgroundColor};

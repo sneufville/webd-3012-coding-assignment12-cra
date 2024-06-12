@@ -9,7 +9,7 @@ import Card from "./Card";
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  title: "Components/Card",
+  title: "UIGarden/Card",
   tags: ["autodocs"],
   argTypes: {
     backgroundColor: {

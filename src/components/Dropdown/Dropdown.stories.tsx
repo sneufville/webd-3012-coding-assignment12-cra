@@ -9,7 +9,7 @@ import Dropdown from "./Dropdown";
 
 const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
-  title: "Components/Dropdown",
+  title: "UIGarden/Dropdown",
   tags: ["autodocs"],
   argTypes: {
     backgroundColor: {

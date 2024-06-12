@@ -9,7 +9,7 @@ import Radio from "./Radio";
 
 const meta: Meta<typeof Radio> = {
   component: Radio,
-  title: "Components/Radio",
+  title: "UIGarden/Radio",
   tags: ["autodocs"],
   argTypes: {
     backgroundColor: {

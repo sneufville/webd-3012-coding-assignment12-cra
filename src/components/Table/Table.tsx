@@ -9,20 +9,22 @@ import styled from "styled-components";
 
 import type { StyledTableProps, TableProps } from "./Table.types";
 
-const StyledTable = styled.table<StyledTableProps>`
+const StyledTable = styled.table.attrs<StyledTableProps>((props) => ({
+  "data-testid": props["data-testid"] ?? "ui-garden-table",
+}))`
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   margin: 1rem;
 `;
 
-/**
- * @function Table
- * @param disabled
- * @param children
- * @constructor
- * @description Table component based on Styled components
- */
-const Table: React.FC<TableProps> = ({ disabled, children }) => {
-  return <StyledTable disabled={disabled}>{children}</StyledTable>;
+const Table: React.FC<TableProps> = ({ disabled, children, testId }) => {
+  return (
+    <StyledTable
+      disabled={disabled}
+      data-testid={testId}
+    >
+      {children}
+    </StyledTable>
+  );
 };
 
 export default Table;

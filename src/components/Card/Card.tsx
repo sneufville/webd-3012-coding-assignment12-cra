@@ -18,8 +18,8 @@ const StyledCard = styled.div<StyledCardProps>`
   gap: 0.25rem;
   padding: 0 0.5rem 0.5rem 0.5rem;
   &:hover {
-    background-color: ${(props) => (props.disabled ? "#f5f5f5" : "#26aafd")};
     transition-duration: 300ms;
+    filter: brightness(${(props) => (props.disabled ? 100 : 120)}%);
   }
 `;
 

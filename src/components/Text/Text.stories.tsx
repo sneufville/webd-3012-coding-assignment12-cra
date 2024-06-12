@@ -8,7 +8,7 @@ import Text from "./Text";
 
 const meta: Meta<typeof Text> = {
   component: Text,
-  title: "Components/Text",
+  title: "UIGarden/Text",
   tags: ["autodocs"],
   argTypes: {
     backgroundColor: {
